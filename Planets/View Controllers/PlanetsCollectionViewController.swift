@@ -18,6 +18,7 @@ class PlanetsCollectionViewController: UICollectionViewController {
     
     var planets: [Planet] {
         let shouldShowPluto = UserDefaults.standard.bool(forKey: .shouldShowPlutoKey)
+        //user defaults are handeled
         return shouldShowPluto ? planetController.planetsWithPluto : planetController.planetsWithoutPluto
     }
     
